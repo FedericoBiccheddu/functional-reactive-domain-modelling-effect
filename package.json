@@ -12,6 +12,14 @@
     "email": "433819+FedericoBiccheddu@users.noreply.github.com",
     "url": "http://f15u.dev/"
   },
+  "scripts": {
+    "dev": "nodemon --signal SIGINT --ext .ts --watch index.ts --exec 'node --import=tsimp/import index.ts'"
+  },
+  "dependencies": {
+    "@effect/platform": "0.66.2",
+    "@effect/platform-node": "0.61.3",
+    "effect": "3.8.4"
+  },
   "devDependencies": {
     "@biomejs/biome": "1.9.2",
     "@total-typescript/tsconfig": "1.0.4",
