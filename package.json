@@ -1,0 +1,40 @@
+{
+  "name": "functional-reactive-domain-modelling-effect",
+  "private": true,
+  "license": "Unlicense",
+  "type": "module",
+  "engines": {
+    "node": "20.17"
+  },
+  "sideEffects": [],
+  "author": {
+    "name": "Federico Biccheddu",
+    "email": "433819+FedericoBiccheddu@users.noreply.github.com",
+    "url": "http://f15u.dev/"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.2",
+    "@total-typescript/tsconfig": "1.0.4",
+    "@types/node": "20.16.7",
+    "nodemon": "3.1.4",
+    "rimraf": "6.0.1",
+    "tsimp": "2.0.11",
+    "typescript": "5.6.2",
+    "vitest": "2.1.1"
+  },
+  "pnpm": {
+    "supportedArchitectures": {
+      "os": [
+        "darwin",
+        "current"
+      ],
+      "cpu": [
+        "x64",
+        "arm64"
+      ]
+    },
+    "patchedDependencies": {
+      "typescript@5.6.2": "patches/typescript@5.6.2.patch"
+    }
+  }
+}

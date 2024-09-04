@@ -1,0 +1,78 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"files": {
+		"ignoreUnknown": true,
+		"include": [
+			".vscode/*.json",
+			"config/**/*.ts",
+			"source/**/*.ts",
+			"index.ts",
+			"tsconfig.json"
+		],
+		"ignore": ["var/**/*"]
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"all": true,
+			"nursery": {
+				"useImportRestrictions": "off"
+			},
+			"complexity": {
+				"noStaticOnlyClass": "off"
+			},
+			"correctness": {
+				"noNodejsModules": "off"
+			},
+			"style": {
+				"noNamespace": "off",
+				"noNamespaceImport": "off",
+				"useShorthandArrayType": "off",
+				"useNamingConvention": {
+					"level": "off",
+					"options": {
+						"strictCase": false
+					}
+				},
+				"useConsistentArrayType": {
+					"level": "error",
+					"options": {
+						"syntax": "generic"
+					}
+				},
+				"useFilenamingConvention": {
+					"level": "error",
+					"options": {
+						"requireAscii": true,
+						// `camelCase` is used for the `server.ts` file unless https://github.com/biomejs/biome/issues/2421 is fixed
+						"filenameCases": ["PascalCase", "camelCase", "export"]
+					}
+				}
+			},
+			"suspicious": {
+				"noShadowRestrictedNames": "off"
+			}
+		}
+	},
+	"overrides": [
+		{
+			"include": ["config/**/*.ts"],
+			"linter": {
+				"rules": {
+					"style": {
+						"noDefaultExport": "off",
+						"useFilenamingConvention": {
+							"level": "error",
+							"options": {
+								"filenameCases": ["camelCase", "export"]
+							}
+						}
+					}
+				}
+			}
+		}
+	]
+}
