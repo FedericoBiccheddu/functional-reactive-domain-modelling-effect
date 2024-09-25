@@ -1,0 +1,9 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": ["@total-typescript/tsconfig/tsc/no-dom/app"],
+	"compilerOptions": {
+		"declaration": false,
+		"declarationMap": false
+	},
+	"files": ["index.ts"]
+}
